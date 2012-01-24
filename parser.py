@@ -8,7 +8,7 @@ f = open(sys.argv[1], 'wt')
 
 try:
     writer = csv.writer(f)
-    writer.writerow( ('Eier', 'Epost', 'MAC-adresse', 'Serienummer', 'IMEI', 'Enhetsnavn', 'Versjon') )
+    writer.writerow( ('Owner', 'Email', 'MAC-adress', 'Serialnumber', 'IMEI', 'Devicename', 'Version') )
     for infile in glob.glob( os.path.join(path, '*.deviceinfo') ):
 	plist = plistlib.Plist.fromFile(infile)
 
