@@ -2,7 +2,7 @@
 import plistlib, sys, codecs, os, glob, csv
 
 reload(sys)
-sys.setdefaultencoding( "latin-1" )
+sys.setdefaultencoding( "utf-8" )
 path = ''
 f = open(sys.argv[1], 'wt')
 
@@ -12,6 +12,6 @@ try:
     for infile in glob.glob( os.path.join(path, '*.deviceinfo') ):
 	plist = plistlib.Plist.fromFile(infile)
 
-	writer.writerow( ((plist["ownerName"]), (plist["ownerEmail"]), (plist["deviceWiFiMACAddress"]), (plist["deviceSerialNumber"]), (plist["deviceIMEI"]), (plist["deviceName"]), (plist["deviceProductVersion"])) )
+	writer.writerow( ((plist.get("ownerName")), (plist.get("ownerEmail")), (plist.get("deviceWiFiMACAddress")), (plist.get("deviceSerialNumber")), (plist.get("deviceIMEI")), (plist.get("deviceName")), (plist.get("deviceProductVersion"))) )
 finally:
     f.close()
