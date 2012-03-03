@@ -12,6 +12,6 @@ try:
     for infile in glob.glob( os.path.join(path, '*.deviceinfo') ):
 	plist = plistlib.Plist.fromFile(infile)
 
-	writer.writerow( ((plist.get("ownerName")), (plist.get("ownerEmail")), (plist.get("deviceWiFiMACAddress")), (plist.get("deviceSerialNumber")), (plist.get("deviceIMEI")), (plist.get("deviceName")), (plist.get("deviceProductVersion")), (plist.get("deviceClass")))
+	writer.writerow( ((plist.get("ownerName")), (plist.get("ownerEmail")), (plist.get("deviceWiFiMACAddress")), (plist.get("deviceSerialNumber")), (plist.get("deviceIMEI")), (plist.get("deviceName")), (plist.get("deviceProductVersion")), (plist.get("deviceClass"))))
 finally:
     f.close()
