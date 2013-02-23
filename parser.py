@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import plistlib, sys, codecs, os, glob, csv
+import plistlib, sys, os, glob, csv
 
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
