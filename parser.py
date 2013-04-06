@@ -20,7 +20,7 @@ try:
 		(device.get("deviceIMEI")), 
 		(device.get("deviceName")), 
 		(device.get("deviceProductVersion")), 
-		(divice.get("deviceClass")) 
+		(device.get("deviceClass")) 
 		))
 finally:
     f.close()
