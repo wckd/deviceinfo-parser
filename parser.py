@@ -10,17 +10,17 @@ try:
     writer = csv.writer(f)
     writer.writerow( ('Owner', 'Email', 'MAC-adress', 'Serialnumber', 'IMEI', 'Devicename', 'Version', 'Type') )
     for infile in glob.glob( os.path.join(path, '*.deviceinfo') ):
-	plist = plistlib.Plist.fromFile(infile)
+	device = plistlib.Plist.fromFile(infile)
 
 	writer.writerow(( 
-		(plist.get("ownerName")), 
-		(plist.get("ownerEmail")), 
-		(plist.get("deviceWiFiMACAddress")), 
-		(plist.get("deviceSerialNumber")), 
-		(plist.get("deviceIMEI")), 
-		(plist.get("deviceName")), 
-		(plist.get("deviceProductVersion")), 
-		(plist.get("deviceClass")) 
+		(device.get("ownerName")), 
+		(device.get("ownerEmail")), 
+		(device.get("deviceWiFiMACAddress")), 
+		(device.get("deviceSerialNumber")), 
+		(device.get("deviceIMEI")), 
+		(device.get("deviceName")), 
+		(device.get("deviceProductVersion")), 
+		(divice.get("deviceClass")) 
 		))
 finally:
     f.close()
