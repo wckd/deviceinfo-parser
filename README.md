@@ -8,13 +8,13 @@ It parses the .deviceinfo-files in the current folder, and adds them to your spe
 The .csv-file can then be imported in openoffice/libreoffice calc or Excel :)
 
 ## Dependencies
-Please install [python-unicodecsv](https://github.com/jdunck/python-unicodecsv) to the python-path, i.e.:
+Please install [python-unicodecsv](https://pypi.python.org/pypi/unicodecsv/) to the python-path, i.e.:
 
-	pip install python-unicodecsv
+	pip install unicodecsv
 
 or
 
-	easy_install python-unicodecsv	
+	easy_install unicodecsv
 		
 
 ## Usage
