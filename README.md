@@ -11,6 +11,10 @@ The .csv-file can then be imported in openoffice/libreoffice calc or Excel :)
 Please install [python-unicodecsv](https://github.com/jdunck/python-unicodecsv) to the python-path, i.e.:
 
 	pip install python-unicodecsv
+
+or
+
+	easy_install python-unicodecsv	
 		
 
 ## Usage
