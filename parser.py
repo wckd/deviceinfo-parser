@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import plistlib, sys, os, glob, csv
+import plistlib, sys, os, glob
 import unicodecsv
 
 path = ''
