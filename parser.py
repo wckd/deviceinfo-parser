@@ -9,7 +9,7 @@ else:
         f = open(sys.argv[1], 'wt')
 
 try:
-    writer = unicodecsv.writer(f, encoding='utf-8')
+    writer = unicodecsv.writer(f)
     writer.writerow( ('Owner', 'Email', 'MAC-adress', 'Serialnumber', 'IMEI', 'Devicename', 'Version', 'Type') )
     for infile in glob.glob( os.path.join(path, '*.deviceinfo') ):
         device = plistlib.Plist.fromFile(infile)
